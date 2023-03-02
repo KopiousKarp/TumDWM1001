@@ -19,11 +19,53 @@ void setup() {
   rum.attach(rightup);
   rdm.attach(rightdown);
 
+  Serial.begin(9600);
+  Serial.println("Hello from tum_base");
 }
 
 void loop() {
-  forward(5000);
-  palse(5000);
+   if (Serial.available()) { // if there's data coming in from the serial connection
+    String inputString = Serial.readStringUntil('\n'); // read the incoming data until a newline character is received
+    int colonIndex = inputString.indexOf(':'); // find the index of the colon character
+    if (colonIndex >= 0) { // if the colon character is found
+      String command = inputString.substring(0, colonIndex); // extract the command from the input string
+      int time = inputString.substring(colonIndex + 1).toInt(); // extract the time from the input string and convert it to an integer
+      // do something with the command and time variables
+    }
+  }
+  switch(command) {
+    case "forward":
+      forward(time);
+      break;
+    case "backward":
+      backward(time);
+      break;
+    case "right":
+      right(time);
+      break;
+    case "left":
+      left(time);
+      break;
+    case "rightDia":
+      rightDia(time);
+      break;
+    case "leftDia":
+      leftDia(time);
+      break;
+    case "turnaround":
+      turnaround(time);
+      break;
+    case "turn":
+      turn(time);
+      break;
+    case "palse":
+      palse(time);
+      break;
+    default:
+      // handle unknown command
+      break;
+  }
+
 }
 
 int leftUpControl(int rpm){
@@ -104,3 +146,4 @@ void palse(int msec){
   rightDownControl(0);
   delay(msec);
 }
+
