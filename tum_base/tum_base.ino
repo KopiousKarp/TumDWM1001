@@ -21,6 +21,7 @@ void setup() {
 
   Serial.begin(9600);
   Serial.println("Hello from tum_base");
+  Serial.println("palse:100");
 }
 
 void loop() {
@@ -31,53 +32,63 @@ void loop() {
       String command = inputString.substring(0, colonIndex); // extract the command from the input string
       int time = inputString.substring(colonIndex + 1).toInt(); // extract the time from the input string and convert it to an integer
       // do something with the command and time variables
+      Serial.print("running with recieved input:");
+      Serial.println(inputString);            
+      char control_char = command[0]; 
+      switch(control_char) {
+        case 'f':
+          forward(time);
+          palse(10);
+          break;
+        case 'b':
+          backward(time);
+          palse(10);
+          break;
+        case 'r':
+          right(time);
+          palse(10);
+          break;
+        case 'l':
+          left(time);
+          palse(10);
+          break;
+        case '>':
+          rightDia(time);
+          palse(10);
+          break;
+        case '<':
+          leftDia(time);
+          palse(10);
+          break;
+        case '-':
+          turnaround(time);
+          palse(10);
+          break;
+        case 't':
+          turn(time);
+          palse(10);
+          break;
+        case 'p':
+          palse(time);
+          break;
+        default:
+          // handle unknown command
+          break;
+      }       
     }
   }
-  switch(command) {
-    case "forward":
-      forward(time);
-      break;
-    case "backward":
-      backward(time);
-      break;
-    case "right":
-      right(time);
-      break;
-    case "left":
-      left(time);
-      break;
-    case "rightDia":
-      rightDia(time);
-      break;
-    case "leftDia":
-      leftDia(time);
-      break;
-    case "turnaround":
-      turnaround(time);
-      break;
-    case "turn":
-      turn(time);
-      break;
-    case "palse":
-      palse(time);
-      break;
-    default:
-      // handle unknown command
-      break;
-  }
-
 }
 
-int leftUpControl(int rpm){
+void leftUpControl(int rpm){
   lum.write(map(rpm,-100,100,1000,2000));
 }
-int leftDownControl(int rpm){
+void leftDownControl(int rpm){
   ldm.write(map(rpm,-100,100,1000,2000));
 }
-int rightUpControl(int rpm){
+void rightUpControl(int rpm){
   rum.write(map(rpm,-100,100,1000,2000));
 }
-int rightDownControl(int rpm){
+void rightDownControl(int rpm){
   rdm.write(map(rpm,-100,100,1000,2000));
 }
 
