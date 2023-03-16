@@ -33,50 +33,63 @@ void loop() {
       int time = inputString.substring(colonIndex + 1).toInt(); // extract the time from the input string and convert it to an integer
       // do something with the command and time variables
       Serial.print("running with recieved input:");
-      Serial.println(inputString);            
-      char control_char = command[0]; 
+      Serial.println(inputString);
+      char control_char = command[0];
       switch(control_char) {
         case 'f':
           forward(time);
           palse(10);
+          readySignal()
           break;
         case 'b':
           backward(time);
           palse(10);
+          readySignal()
           break;
         case 'r':
           right(time);
           palse(10);
+          readySignal()
           break;
         case 'l':
           left(time);
           palse(10);
+          readySignal()
           break;
         case '>':
           rightDia(time);
           palse(10);
+          readySignal()
           break;
         case '<':
           leftDia(time);
           palse(10);
+          readySignal()
           break;
         case '-':
           turnaround(time);
           palse(10);
+          readySignal()
           break;
         case 't':
           turn(time);
           palse(10);
+          readySignal()
           break;
         case 'p':
           palse(time);
+          readySignal()
           break;
         default:
           // handle unknown command
           break;
-      }       
+      }
     }
   }
+}
+
+void readySignal(){
+  Serial.println("base is ready");
 }
 
 void leftUpControl(int rpm){
@@ -97,7 +110,7 @@ void forward(int msec){
   leftDownControl(95);
   rightUpControl(-100);//right negative
   rightDownControl(-100);
-  delay(msec); 
+  delay(msec);
 }
 
 void backward(int msec){
@@ -105,7 +118,7 @@ void backward(int msec){
   leftDownControl(-100);
   rightUpControl(100);
   rightDownControl(100);
-  delay(msec); 
+  delay(msec);
 }
 
 void right(int msec){
@@ -127,13 +140,13 @@ void left(int msec){
 void rightDia(int msec){
   leftUpControl(100);
   rightDownControl(-100);
-  delay(msec);  
+  delay(msec);
 }
 
 void leftDia(int msec){
   leftDownControl(100);
   rightUpControl(-100);
-  delay(msec); 
+  delay(msec);
 }
 
 void turnaround(int msec){
@@ -147,7 +160,7 @@ void turnaround(int msec){
 void turn(int msec){
   leftUpControl(100);
   rightUpControl(100);
-  delay(msec);  
+  delay(msec);
 }
 
 void palse(int msec){

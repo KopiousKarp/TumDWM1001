@@ -7,3 +7,8 @@ while True:
     commandString = input("Command: ")
     comByte = bytes(commandString, 'utf-8')
     ser.write(comByte)
+    base_response = ser.readline().decode().strip()
+    if(base_response == "error"):
+        print("error has occured")
+    else
+        print("base is ready")
