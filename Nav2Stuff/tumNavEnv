@@ -1,0 +1,9 @@
+#!/bin/bash
+docker run -it     \
+    --net=host \
+    --env="DISPLAY" \
+    --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+    --privileged    \
+    tumnav2 $@
+#   osrf/ros:humble-desktop-full bash
+
