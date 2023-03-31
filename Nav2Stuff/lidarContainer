@@ -4,7 +4,8 @@ docker run -it     \
     --net=host \
     --env="DISPLAY" \
     --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+    --volume="/dev/ttyUSB0:/dev/ttyUSB0" \
     --privileged    \
-    tumnav2 $@
-#   osrf/ros:humble-desktop-full bash
+    rplidar-container $@
+
 

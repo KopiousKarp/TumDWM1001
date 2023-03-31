@@ -39,46 +39,46 @@ void loop() {
         case 'f':
           forward(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case 'b':
           backward(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case 'r':
           right(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case 'l':
           left(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case '>':
           rightDia(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case '<':
           leftDia(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case '-':
           turnaround(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case 't':
           turn(time);
           palse(10);
-          readySignal()
+          readySignal();
           break;
         case 'p':
           palse(time);
-          readySignal()
+          readySignal();
           break;
         default:
           // handle unknown command
