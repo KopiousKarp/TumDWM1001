@@ -26,7 +26,7 @@
 <visual>
 <origin xyz="0.05254044756293296814 0.040527734905481338501 0.050800000000000011813" rpy="1.570796326794896558 1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 <material name="part_1_material">
 <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
@@ -35,7 +35,7 @@
 <collision>
 <origin xyz="0.05254044756293296814 0.040527734905481338501 0.050800000000000011813" rpy="1.570796326794896558 1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 </collision>
 <inertial>
@@ -58,7 +58,7 @@
 <visual>
 <origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 <material name="part_1_material">
 <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
@@ -67,7 +67,7 @@
 <collision>
 <origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 </collision>
 <inertial>
@@ -90,7 +90,7 @@
 <visual>
 <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 <material name="part_1_material">
 <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
@@ -99,7 +99,7 @@
 <collision>
 <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 </collision>
 <inertial>
@@ -122,7 +122,7 @@
 <visual>
 <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 <material name="part_1_material">
 <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
@@ -131,7 +131,7 @@
 <collision>
 <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
 <geometry>
-<mesh filename=" file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
 </geometry>
 </collision>
 <inertial>
