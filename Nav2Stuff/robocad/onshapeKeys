@@ -1,0 +1,4 @@
+#!/bin/bash
+export ONSHAPE_API=https://cad.onshape.com
+export ONSHAPE_ACCESS_KEY=WZj1gen3xrReuLabFkExrZgo
+export ONSHAPE_SECRET_KEY=xcGKOc2YcxwRygoezNY4DtEtqweXoxdH0RVXqReDvHURpyVe
