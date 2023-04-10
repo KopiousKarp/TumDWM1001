@@ -1,0 +1,224 @@
+<robot name="onshape">
+<link name="base_link">
+<visual>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///base_link.stl"/>
+</geometry>
+<material name="base_link_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0 0" rpy="0 -0 0" />
+<geometry>
+<mesh filename="package:///base_link.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="2.0783549936731405444e-17 -3.7555308981286850598e-17 0.025400000000000002437" rpy="0 0 0"/>
+<mass value="0.4998587895360000477" />
+<inertia ixx="0.0053738614274228243065" ixy="0"  ixz="0" iyy="0.0040329093237952860426" iyz="0" izz="0.0091927316703080182853" />
+</inertial>
+</link>
+
+<link name="base">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="base_frame" type="fixed">
+<origin xyz="0 -5.5511151231257827021e-17 0.050799999999999997935" rpy="0 -0 0" />
+<parent link="base_link" />
+<child link="base" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="wheel_link">
+<visual>
+<origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+<material name="wheel_link_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="wheel3">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="wheel3_frame" type="fixed">
+<origin xyz="0 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<parent link="wheel_link" />
+<child link="wheel3" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<joint name="wheel1" type="revolute">
+<origin xyz="0.20320000000000010276 0.10159999999999996811 0.025400000000000005906" rpy="1.570796326794896558 -0 1.570796326794896558" />
+<parent link="base_link" />
+<child link="wheel_link" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="wheel_link_2">
+<visual>
+<origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000039568" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+<material name="wheel_link_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000039568" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="wheel4">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="wheel4_frame" type="fixed">
+<origin xyz="2.7755575615628913511e-17 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<parent link="wheel_link_2" />
+<child link="wheel4" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<joint name="wheel2" type="revolute">
+<origin xyz="0.20320000000000004725 -0.10160000000000005138 0.025400000000000005906" rpy="1.570796326794896558 -0 1.570796326794896558" />
+<parent link="base_link" />
+<child link="wheel_link_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="wheel_link_3">
+<visual>
+<origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+<material name="wheel_link_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="wheel1">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="wheel1_frame" type="fixed">
+<origin xyz="0 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<parent link="wheel_link_3" />
+<child link="wheel1" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<joint name="wheel3" type="revolute">
+<origin xyz="-0.20319999999999999174 0.10159999999999999587 0.025400000000000005906" rpy="-1.570796326794896558 -0 1.570796326794896558" />
+<parent link="base_link" />
+<child link="wheel_link_3" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="wheel_link_4">
+<visual>
+<origin xyz="0.052540447562932961201 0.040527734905481338501 2.7755575615628913511e-17" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+<material name="wheel_link_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.052540447562932961201 0.040527734905481338501 2.7755575615628913511e-17" rpy="1.570796326794896558 1.570796326794896558 0" />
+<geometry>
+<mesh filename="package:///wheel_link.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="wheel2">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="wheel2_frame" type="fixed">
+<origin xyz="-1.3877787807814456755e-17 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<parent link="wheel_link_4" />
+<child link="wheel2" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<joint name="wheel4" type="revolute">
+<origin xyz="-0.20320000000000004725 -0.10160000000000000975 0.025400000000000005906" rpy="-1.570796326794896558 -0 1.570796326794896558" />
+<parent link="base_link" />
+<child link="wheel_link_4" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+
+</robot>
