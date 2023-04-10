@@ -1,154 +1,156 @@
-<robot name="Tum_onshape">
-<link name="base_link">
-<visual>
-<origin xyz="0.13756722183227537704 0.17450665559768677171 -0.06298734837174416179" rpy="0 -0 1.561055996379578982e-16" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/base_link.stl"/>
-</geometry>
-<material name="base_link_material">
-<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
-</material>
-</visual>
-<collision>
-<origin xyz="0.13756722183227537704 0.17450665559768677171 -0.06298734837174416179" rpy="0 -0 1.561055996379578982e-16" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/base_link.stl"/>
-</geometry>
-</collision>
-<inertial>
-<origin xyz="0 0 0" rpy="0 0 0"/>
-<mass value="0" />
-<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
-</inertial>
-</link>
+<?xml version="1.0"?>
+<robot name="sam_bot">
+<!-- Robot Base -->
+  <link name="base_link">
+    <visual>
+    <origin xyz="0.13756722183227537704 0.17450665559768677171 -0.06298734837174416179" rpy="0 -0 1.561055996379578982e-16" />
+      <geometry>
+        <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/base_link.stl"/>
+      </geometry>
+      <material name="base_link_material">
+        <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.13756722183227537704 0.17450665559768677171 -0.06298734837174416179" rpy="0 -0 1.561055996379578982e-16" />
+        <geometry>
+          <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/base_link.stl"/>
+        </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0" />
+      <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
 
-<link name="part_1">
-<visual>
-<origin xyz="0.05254044756293296814 0.040527734905481338501 0.050800000000000011813" rpy="1.570796326794896558 1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-<material name="part_1_material">
-<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
-</material>
-</visual>
-<collision>
-<origin xyz="0.05254044756293296814 0.040527734905481338501 0.050800000000000011813" rpy="1.570796326794896558 1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-</collision>
-<inertial>
-<origin xyz="0 0 0" rpy="0 0 0"/>
-<mass value="0" />
-<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
-</inertial>
-</link>
+  <link name="part_1">
+    <visual>
+      <origin xyz="0.05254044756293296814 0.040527734905481338501 0.050800000000000011813" rpy="1.570796326794896558 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.05254044756293296814 0.040527734905481338501 0.050800000000000011813" rpy="1.570796326794896558 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0" />
+      <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
 
-<joint name="wheel1_speed" type="revolute">
-<origin xyz="0.34076722183227542429 0.072906655597686748083 -0.037587348371744155884" rpy="-1.570796326794896558 -0 1.570796326794896558" />
-<parent link="base_link" />
-<child link="part_1" />
-<axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
-<joint_properties friction="0.0"/>
-</joint>
+  <joint name="wheel1_speed" type="revolute">
+    <origin xyz="0.34076722183227542429 0.072906655<!-- Robot Base -->597686748083 -0.037587348371744155884" rpy="-1.570796326794896558 -0 1.570796326794896558" />
+    <parent link="base_link" />
+    <child link="part_1" />
+    <axis xyz="0 0 1"/>
+    <limit effort="1" velocity="20" />
+    <joint_properties friction="0.0"/>
+  </joint>
 
-<link name="part_1_2">
-<visual>
-<origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-<material name="part_1_material">
-<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
-</material>
-</visual>
-<collision>
-<origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-</collision>
-<inertial>
-<origin xyz="0 0 0" rpy="0 0 0"/>
-<mass value="0" />
-<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
-</inertial>
-</link>
+  <link name="part_1_2">
+    <visual>
+      <origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/><!-- Robot Base -->
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+      </material>
+    </visual>
+    <collision>
+       <origin xyz="0.05254044756293296814 -0.040527734905481338501 -0.050800000000000011813" rpy="-1.570796326794896558 -1.570796326794896558 0" />
+       <geometry>
+         <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+       </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0" />
+      <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
 
-<joint name="wheel2_speed" type="revolute">
-<origin xyz="0.34076722183227542429 0.27610665559768676758 -0.037587348371744155884" rpy="1.570796326794896558 -0 1.570796326794896558" />
-<parent link="base_link" />
-<child link="part_1_2" />
-<axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
-<joint_properties friction="0.0"/>
-</joint>
+  <joint name="wheel2_speed" type="revolute">
+    <origin xyz="0.34076722183227542429 0.27610665559768676758 -0.037587348371744155884" rpy="1.570796326794896558 -0 1.570796326794896558" />
+    <parent link="base_link" />
+    <child link="part_1_2" />
+    <axis xyz="0 0 1"/>
+    <limit effort="1" velocity="20" />
+    <joint_properties friction="0.0"/>
+  </joint>
 
-<link name="part_1_3">
-<visual>
-<origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-<material name="part_1_material">
-<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
-</material>
-</visual>
-<collision>
-<origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-</collision>
-<inertial>
-<origin xyz="0 0 0" rpy="0 0 0"/>
-<mass value="0" />
-<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
-</inertial>
-</link>
+  <link name="part_1_3">
+    <visual>
+       <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
+       <geometry>
+          <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+       </geometry>
+       <material name="part_1_material">
+         <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+       </material>
+    </visual>
+    <collision>
+      <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0" />
+      <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
 
-<joint name="wheel3_speed" type="revolute">
-<origin xyz="-0.06563277816772464246 0.072906655597686720327 -0.037587348371744155884" rpy="-1.570796326794896558 -0 1.570796326794896558" />
-<parent link="base_link" />
-<child link="part_1_3" />
-<axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
-<joint_properties friction="0.0"/>
-</joint>
+  <joint name="wheel3_speed" type="revolute">
+    <origin xyz="-0.06563277816772464246 0.072906655597686720327 -0.037587348371744155884" rpy="-1.570796326794896558 -0 1.570796326794896558" />
+    <parent link="base_link" />
+    <child link="part_1_3" />
+    <axis xyz="0 0 1"/>
+    <limit effort="1" velocity="20" />
+    <joint_properties friction="0.0"/>
+  </joint>
 
-<link name="part_1_4">
-<visual>
-<origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-<material name="part_1_material">
-<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
-</material>
-</visual>
-<collision>
-<origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
-<geometry>
-<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
-</geometry>
-</collision>
-<inertial>
-<origin xyz="0 0 0" rpy="0 0 0"/>
-<mass value="0" />
-<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
-</inertial>
-</link>
+  <link name="part_1_4">
+    <visual>
+      <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+      </geometry>
+      <material name="part_1_material">
+        <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.05254044756293296814 0.040527734905481338501 0" rpy="1.570796326794896558 1.570796326794896558 0" />
+      <geometry>
+        <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum/part_1.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0" />
+      <inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
 
-<joint name="wheel4_speed" type="revolute">
-<origin xyz="-0.06563277816772464246 0.27610665559768676758 -0.037587348371744155884" rpy="-1.570796326794896558 -0 1.570796326794896558" />
-<parent link="base_link" />
-<child link="part_1_4" />
-<axis xyz="0 0 1"/>
-<limit effort="1" velocity="20" />
-<joint_properties friction="0.0"/>
-</joint>
+  <joint name="wheel4_speed" type="revolute">
+    <origin xyz="-0.06563277816772464246 0.27610665559768676758 -0.037587348371744155884" rpy="-1.570796326794896558 -0 1.570796326794896558" />
+    <parent link="base_link" />
+    <child link="part_1_4" />
+    <axis xyz="0 0 1"/>
+    <limit effort="1" velocity="20" />
+    <joint_properties friction="0.0"/>
+  </joint>
 
 
 </robot>
