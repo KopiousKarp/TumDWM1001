@@ -47,7 +47,7 @@
     </inertial>
   </link>
 
-  <joint name="wheel1_speed" type="revolute">
+  <joint name="wheel1_speed" type="continuous">
     <origin xyz="0.34076722183227542429 0.072906655597686748083 -0.037587348371744155884" rpy="-1.570796326794896558 -0 1.570796326794896558" />
     <parent link="base_link" />
     <child link="part_1" />
