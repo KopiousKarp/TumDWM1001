@@ -3,7 +3,7 @@
 <visual>
 <origin xyz="0.054756132864952095085 -0.084525883483886732339 0.043843622636795039071" rpy="0 -0 0" />
 <geometry>
-<mesh filename="package:///part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum_block/part_1.stl"/>
 </geometry>
 <material name="part_1_material">
 <color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
@@ -12,7 +12,7 @@
 <collision>
 <origin xyz="0.054756132864952095085 -0.084525883483886732339 0.043843622636795039071" rpy="0 -0 0" />
 <geometry>
-<mesh filename="package:///part_1.stl"/>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum_block/part_1.stl"/>
 </geometry>
 </collision>
 <inertial>
