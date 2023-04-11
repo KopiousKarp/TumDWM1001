@@ -1,7 +1,7 @@
 <robot name="onshape">
 <link name="base_link">
 <visual>
-<origin xyz="0 0 0" rpy="0 -0 0" />
+<origin xyz="-0.0070797756138584466701 -0.0029869720152075063258 0.0016508074818313463183" rpy="0 -0 0" />
 <geometry>
 <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum2/base_link.stl"/>
 </geometry>
@@ -10,14 +10,14 @@
 </material>
 </visual>
 <collision>
-<origin xyz="0 0 0" rpy="0 -0 0" />
+<origin xyz="-0.0070797756138584466701 -0.0029869720152075063258 0.0016508074818313463183" rpy="0 -0 0" />
 <geometry>
 <mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum2/base_link.stl"/>
 </geometry>
 </collision>
 <inertial>
-<origin xyz="2.0783549936731405444e-17 -3.7555308981286850598e-17 0.025400000000000002437" rpy="0 0 0"/>
-<mass value="0.4998587895360000477" />
+<origin xyz="-0.0070797756138584232513 -0.0029869720152075431886 0.027050807481831355694" rpy="0 0 0"/>
+<mass value="0.49985878953600015873" />
 <inertia ixx="0.0053738614274228243065" ixy="0"  ixz="0" iyy="0.0040329093237952860426" iyz="0" izz="0.0091927316703080182853" />
 </inertial>
 </link>
@@ -30,7 +30,7 @@
 </inertial>
 </link>
 <joint name="base_frame" type="fixed">
-<origin xyz="0 -5.5511151231257827021e-17 0.050799999999999997935" rpy="0 -0 0" />
+<origin xyz="-0.0063901649612328748074 -0.00027908066273285223047 0.052450807481831340784" rpy="0 -0 0" />
 <parent link="base_link" />
 <child link="base" />
 <axis xyz="0 0 0"/>
@@ -67,14 +67,14 @@
 </inertial>
 </link>
 <joint name="wheel3_frame" type="fixed">
-<origin xyz="0 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<origin xyz="0.0027078913524746783814 -0.012500000000000000694 0.013189610652625555209" rpy="-1.570796326794896558 -1.570796326794896558 0" />
 <parent link="wheel_link" />
 <child link="wheel3" />
 <axis xyz="0 0 0"/>
 </joint>
 
 <joint name="wheel1" type="revolute">
-<origin xyz="0.20320000000000010276 0.10159999999999996811 0.025400000000000005906" rpy="1.570796326794896558 -0 1.570796326794896558" />
+<origin xyz="0.19612022438614162834 0.098613027984792461789 0.027050807481831352225" rpy="1.570796326794896558 -0 1.570796326794896558" />
 <parent link="base_link" />
 <child link="wheel_link" />
 <axis xyz="0 0 1"/>
@@ -113,14 +113,14 @@
 </inertial>
 </link>
 <joint name="wheel4_frame" type="fixed">
-<origin xyz="2.7755575615628913511e-17 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<origin xyz="0.0027078913524746922592 -0.012499999999999997224 0.013189610652625582965" rpy="-1.570796326794896558 -1.570796326794896558 0" />
 <parent link="wheel_link_2" />
 <child link="wheel4" />
 <axis xyz="0 0 0"/>
 </joint>
 
 <joint name="wheel2" type="revolute">
-<origin xyz="0.20320000000000004725 -0.10160000000000005138 0.025400000000000005906" rpy="1.570796326794896558 -0 1.570796326794896558" />
+<origin xyz="0.19612022438614157283 -0.10458697201520755771 0.027050807481831348755" rpy="1.570796326794896558 -0 1.570796326794896558" />
 <parent link="base_link" />
 <child link="wheel_link_2" />
 <axis xyz="0 0 1"/>
@@ -151,22 +151,22 @@
 </inertial>
 </link>
 
-<link name="wheel1">
+<link name="wheel2">
 <inertial>
 <origin xyz="0 0 0" rpy="0 0 0" />
 <mass value="1e-9" />
 <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
 </inertial>
 </link>
-<joint name="wheel1_frame" type="fixed">
-<origin xyz="0 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<joint name="wheel2_frame" type="fixed">
+<origin xyz="0.0027078913524746922592 0.012499999999999997224 0.01181038934737443924" rpy="1.570796326794896558 1.570796326794896558 0" />
 <parent link="wheel_link_3" />
-<child link="wheel1" />
+<child link="wheel2" />
 <axis xyz="0 0 0"/>
 </joint>
 
 <joint name="wheel3" type="revolute">
-<origin xyz="-0.20319999999999999174 0.10159999999999999587 0.025400000000000005906" rpy="-1.570796326794896558 -0 1.570796326794896558" />
+<origin xyz="-0.21027977561385843841 0.098613027984792489544 0.027050807481831348755" rpy="-1.570796326794896558 -0 1.570796326794896558" />
 <parent link="base_link" />
 <child link="wheel_link_3" />
 <axis xyz="0 0 1"/>
@@ -197,22 +197,22 @@
 </inertial>
 </link>
 
-<link name="wheel2">
+<link name="wheel1">
 <inertial>
 <origin xyz="0 0 0" rpy="0 0 0" />
 <mass value="1e-9" />
 <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
 </inertial>
 </link>
-<joint name="wheel2_frame" type="fixed">
-<origin xyz="-1.3877787807814456755e-17 0 0" rpy="3.141592653589793116 -0 1.570796326794896558" />
+<joint name="wheel1_frame" type="fixed">
+<origin xyz="0.0027078913524746783814 0.012499999999999997224 0.01181038934737443924" rpy="1.570796326794896558 1.570796326794896558 0" />
 <parent link="wheel_link_4" />
-<child link="wheel2" />
+<child link="wheel1" />
 <axis xyz="0 0 0"/>
 </joint>
 
 <joint name="wheel4" type="revolute">
-<origin xyz="-0.20320000000000004725 -0.10160000000000000975 0.025400000000000005906" rpy="-1.570796326794896558 -0 1.570796326794896558" />
+<origin xyz="-0.21027977561385849392 -0.10458697201520752995 0.027050807481831348755" rpy="-1.570796326794896558 -0 1.570796326794896558" />
 <parent link="base_link" />
 <child link="wheel_link_4" />
 <axis xyz="0 0 1"/>
