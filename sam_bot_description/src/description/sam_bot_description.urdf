@@ -54,15 +54,15 @@
     <joint name="${prefix}_joint" type="continuous">
       <parent link="base_link"/>
       <child link="${prefix}_link"/>
-      <origin xyz="${(x_off)+x_reflect*wheel_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
+      <origin xyz="${(x_off+wheel_radius)+x_reflect*wheel_xoff} ${y_reflect*(base_width/2+wheel_ygap)} ${-wheel_zoff}" rpy="0 0 0"/>
       <axis xyz="0 1 0"/>
     </joint>
   </xacro:macro>
 
   <xacro:wheel prefix="drivewhl_lb" x_reflect="-1" y_reflect="1" x_off="0" off_bool="0"/>
   <xacro:wheel prefix="drivewhl_rb" x_reflect="-1" y_reflect="-1" x_off="0" off_bool="0"/>
-  <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off="${.14+wheel_radius}" off_bool="1"/>
-  <xacro:wheel prefix="drivewhl_lf" x_reflect="-1" y_reflect="1" x_off="${.14+wheel_radius}" off_bool="1"/>
+  <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off=".14" off_bool="1"/>
+  <xacro:wheel prefix="drivewhl_lf" x_reflect="-1" y_reflect="1" x_off=".14" off_bool="1"/>
 
 
 
