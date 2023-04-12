@@ -41,7 +41,7 @@
   <xacro:macro name="wheel" params="prefix x_reflect y_reflect x_off off_bool">
     <link name="${prefix}_link">
       <visual>
-	      <origin xyz="${x_off} 0 0" rpy="${pi/2} 0 0"/>
+	      <origin xyz="0 0 0" rpy="${pi/2+x_off} 0 0"/>
         <geometry>
             <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
         </geometry>
