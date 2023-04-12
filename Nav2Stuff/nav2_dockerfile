@@ -1,7 +1,12 @@
 # syntax=docker/dockerfile:1
 FROM osrf/ros:humble-desktop-full
-RUN apt update
-RUN apt install -y \
+RUN apt update && apt upgrade -y
+RUN apt install -y --fix-missing \
     ros-humble-navigation2 \
-    ros-humble-nav2-bringup \
+    ros-humble-nav2-bringup
+RUN apt install -y \
+    ros-humble-joint-state-publisher-gui \
+    ros-humble-xacro \
     vim
+RUN git clone https://github.com/KopiousKarp/TumDWM1001.git
+RUN git clone https://github.com/ros-planning/navigation2_tutorials.git
