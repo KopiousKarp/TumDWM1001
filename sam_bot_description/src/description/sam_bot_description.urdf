@@ -32,11 +32,16 @@
     <child link="base_footprint"/>
     <origin xyz="0.0 0.0 ${-(wheel_radius+wheel_zoff)}" rpy="0 0 0"/>
   </joint>
-<!-- Wheels -->
+
+
+
+
+
+  <!-- Wheels -->
   <xacro:macro name="wheel" params="prefix x_reflect y_reflect x_off off_bool">
     <link name="${prefix}_link">
       <visual>
-	      <origin xyz="${x_off+(wheel_xoff*off_bool)} 0 0" rpy="${pi/2} 0 0"/>
+	      <origin xyz="${x_off} 0 0" rpy="${pi/2} 0 0"/>
         <geometry>
             <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
         </geometry>
@@ -56,9 +61,14 @@
 
   <xacro:wheel prefix="drivewhl_lb" x_reflect="-1" y_reflect="1" x_off="0" off_bool="0"/>
   <xacro:wheel prefix="drivewhl_rb" x_reflect="-1" y_reflect="-1" x_off="0" off_bool="0"/>
-<!--  <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off=".14" off_bool="1"/>
+  <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off=".14" off_bool="1"/>
   <xacro:wheel prefix="drivewhl_lf" x_reflect="-1" y_reflect="1" x_off=".14" off_bool="1"/>
--->
+
+
+
+
+
+
   <!-- Caster Wheel -->
   <link name="front_caster">
     <visual>
