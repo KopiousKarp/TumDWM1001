@@ -6,6 +6,6 @@ docker run -it     \
     --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
     --volume="/dev/ttyUSB0:/dev/ttyUSB0" \
     --privileged    \
-    rplidar-container $@
+    rplidar $@
 
 

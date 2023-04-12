@@ -1,0 +1,40 @@
+<robot name="onshape">
+<link name="part_1">
+<visual>
+<origin xyz="0.054756132864952095085 -0.084525883483886732339 0.043843622636795039071" rpy="0 -0 0" />
+<geometry>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum_block/part_1.stl"/>
+</geometry>
+<material name="part_1_material">
+<color rgba="0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.054756132864952095085 -0.084525883483886732339 0.043843622636795039071" rpy="0 -0 0" />
+<geometry>
+<mesh filename="file:///TumDWM1001/Nav2Stuff/robocad/tum_block/part_1.stl"/>
+</geometry>
+</collision>
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0"/>
+<mass value="0" />
+<inertia ixx="0" ixy="0"  ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+
+<link name="block">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="block_frame" type="fixed">
+<origin xyz="-0.05866338703781365238 0.031536169536411765013 0.14544362263679505576" rpy="0 -0 0" />
+<parent link="part_1" />
+<child link="block" />
+<axis xyz="0 0 0"/>
+</joint>
+
+
+</robot>
