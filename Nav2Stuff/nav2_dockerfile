@@ -7,6 +7,7 @@ RUN apt install -y --fix-missing \
 RUN apt install -y \
     ros-humble-joint-state-publisher-gui \
     ros-humble-xacro \
+    ros-humble-gazebo-ros-pkgs \
     vim
 RUN git clone https://github.com/KopiousKarp/TumDWM1001.git
 RUN git clone https://github.com/ros-planning/navigation2_tutorials.git
