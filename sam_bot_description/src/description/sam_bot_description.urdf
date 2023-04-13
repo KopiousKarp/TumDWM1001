@@ -91,8 +91,8 @@
 
   <xacro:wheel prefix="drivewhl_lb" x_reflect="-1" y_reflect="1" x_off="0" off_bool="0"/>
   <xacro:wheel prefix="drivewhl_rb" x_reflect="-1" y_reflect="-1" x_off="0" off_bool="0"/>
-  <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off=".14" off_bool="1"/>
-  <xacro:wheel prefix="drivewhl_lf" x_reflect="-1" y_reflect="1" x_off=".14" off_bool="1"/>
+<!--   <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off=".14" off_bool="1"/> -->
+<!--   <xacro:wheel prefix="drivewhl_lf" x_reflect="-1" y_reflect="1" x_off=".14" off_bool="1"/> -->
 
 
 
@@ -216,8 +216,8 @@
     <!-- wheels -->
     <left_back_joint>drivewhl_lb_joint</left_back_joint>
     <right_back_joint>drivewhl_rb_joint</right_back_joint>
-    <left_front_joint>drivewhl_lf_joint</left_front_joint>
-    <right_front_joint>drivewhl_rf_joint</right_front_joint>
+<!--     <left_front_joint>drivewhl_lf_joint</left_front_joint> -->
+<!--     <right_front_joint>drivewhl_rf_joint</right_front_joint> -->
     <!-- kinematics -->
     <wheel_separation>0.4</wheel_separation>
     <wheel_diameter>0.2</wheel_diameter>
