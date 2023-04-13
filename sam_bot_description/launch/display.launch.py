@@ -47,8 +47,8 @@ def generate_launch_description():
         launch.actions.DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
                                             description='Absolute path to rviz config file'),
         launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'], output='screen'),
-        joint_state_publisher_node,
-        joint_state_publisher_gui_node,
+        # joint_state_publisher_node,
+        # joint_state_publisher_gui_node,
         robot_state_publisher_node,
         spawn_entity,
         rviz_node
