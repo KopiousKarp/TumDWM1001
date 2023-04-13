@@ -91,8 +91,8 @@
 
   <xacro:wheel prefix="drivewhl_lb" x_reflect="-1" y_reflect="1" x_off="0" off_bool="0"/>
   <xacro:wheel prefix="drivewhl_rb" x_reflect="-1" y_reflect="-1" x_off="0" off_bool="0"/>
-  <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off=".14" off_bool="1"/>
-  <xacro:wheel prefix="drivewhl_lf" x_reflect="-1" y_reflect="1" x_off=".14" off_bool="1"/>
+<!--   <xacro:wheel prefix="drivewhl_rf" x_reflect="-1" y_reflect="-1" x_off=".14" off_bool="1"/> -->
+<!--   <xacro:wheel prefix="drivewhl_lf" x_reflect="-1" y_reflect="1" x_off=".14" off_bool="1"/> -->
 
 
 
