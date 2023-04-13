@@ -214,9 +214,10 @@
     </ros>
 
     <!-- wheels -->
-    <left_joint>drivewhl_l_joint</left_joint>
-    <right_joint>drivewhl_r_joint</right_joint>
-
+    <left_back_joint>drivewhl_lb_joint</left_back_joint>
+    <right_back_joint>drivewhl_rb_joint</right_back_joint>
+    <left_front_joint>drivewhl_lf_joint</left_front_joint>
+    <right_front_joint>drivewhl_rf_joint</right_front_joint>
     <!-- kinematics -->
     <wheel_separation>0.4</wheel_separation>
     <wheel_diameter>0.2</wheel_diameter>
