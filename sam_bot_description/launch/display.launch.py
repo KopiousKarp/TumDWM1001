@@ -55,7 +55,7 @@ def generate_launch_description():
                                             description='Absolute path to rviz config file'),
         launch.actions.ExecuteProcess(cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_init.so', '-s', 'libgazebo_ros_factory.so'], output='screen'),
         launch.actions.DeclareLaunchArgument(name='use_sim_time', default_value='True',
-                                            description='Flag to enable use_sim_time
+                                            description='Flag to enable use_sim_time'),
         # joint_state_publisher_node,
         # joint_state_publisher_gui_node,
         robot_state_publisher_node,
