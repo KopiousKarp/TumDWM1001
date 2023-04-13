@@ -47,8 +47,8 @@ def generate_launch_description():
        parameters=[os.path.join(pkg_share, 'config/ekf.yaml'), {'use_sim_time': LaunchConfiguration('use_sim_time')}]
     )
     return launch.LaunchDescription([
-        # launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
-        #                                     description='Flag to enable joint_state_publisher_gui'),
+        launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
+                                            description='Flag to enable joint_state_publisher_gui'),
         launch.actions.DeclareLaunchArgument(name='model', default_value=default_model_path,
                                             description='Absolute path to robot urdf file'),
         launch.actions.DeclareLaunchArgument(name='rvizconfig', default_value=default_rviz_config_path,
