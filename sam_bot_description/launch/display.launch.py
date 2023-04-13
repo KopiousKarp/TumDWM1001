@@ -33,12 +33,12 @@ def generate_launch_description():
         output='screen',
         arguments=['-d', LaunchConfiguration('rvizconfig')],
     )
-spawn_entity = launch_ros.actions.Node(
-  package='gazebo_ros',
-  executable='spawn_entity.py',
-  arguments=['-entity', 'sam_bot', '-topic', 'robot_description'],
-  output='screen'
-)
+    spawn_entity = launch_ros.actions.Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        arguments=['-entity', 'sam_bot', '-topic', 'robot_description'],
+        output='screen'
+    )
     return launch.LaunchDescription([
         # launch.actions.DeclareLaunchArgument(name='gui', default_value='True',
         #                                     description='Flag to enable joint_state_publisher_gui'),
