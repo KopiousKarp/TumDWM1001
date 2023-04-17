@@ -61,5 +61,5 @@ def generate_launch_description():
         robot_state_publisher_node,
         #spawn_entity,
         robot_localization_node,
-        rviz_node
+        #rviz_node
     ])
