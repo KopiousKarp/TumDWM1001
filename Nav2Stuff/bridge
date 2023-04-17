@@ -1,0 +1,10 @@
+#!/bin/bash
+xhost +local:docker
+docker run -it     \
+    --net=host \
+    --env="DISPLAY" \
+    --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+    --privileged    \
+    ros:foxy-ros1-bridge $@
+
+

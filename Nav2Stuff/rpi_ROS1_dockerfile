@@ -1,0 +1,23 @@
+# syntax=docker/dockerfile:1
+FROM ros:noetic-ros-base
+RUN apt update && apt upgrade -y
+RUN apt install -y \
+	ros-noetic-catkin \
+	python3-catkin-pkg \
+	python-nose \
+	python-setuptools \
+	libgtest-dev \
+	build-essential \
+	git
+RUN git clone https://github.com/KopiousKarp/TumDWM1001.git
+#RUN TumDWM1001/Nav2Stuff/getrplidar.sh
+RUN apt install -y \
+	python-dev \
+	python3-pip 	
+RUN sudo -H python3 -m pip install --upgrade pip
+RUN sudo -H python3 -m pip install pyserial
+RUN mkdir -p ~/uwb_ws/src && cd ~/uwb_ws/src
+RUN git clone https://github.com/TIERS/ros-dwm1001-uwb-localization.git
+#RUN cd ~/uwb_ws
+#RUN catkin init
+#RUN catkin build

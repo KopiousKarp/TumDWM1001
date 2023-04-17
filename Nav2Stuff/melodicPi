@@ -1,0 +1,12 @@
+#!/bin/bash
+xhost +local:docker
+docker run -it     \
+    --net=host \
+    --env="DISPLAY" \
+    --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+    --volume="/dev/ttyUSB0:/dev/ttyUSB0" \
+    --volume="/dev/ttyACM0:/dev/ttyACM0" \
+    --privileged    \
+    rosmelodic:twosensor $@
+
+
