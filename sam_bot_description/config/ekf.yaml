@@ -45,3 +45,15 @@ ekf_filter_node:
                       false, false, false,
                       false, false, false,
                       false, false, false]
+
+        pose0: /dwm1001/tag/T/position
+        pose0_config: [true,  true,  false,
+                       false, false, false,
+                       false, false, false,
+                       false, false, false,
+                       false, false, false]
+        pose0_differential: true
+        pose0_relative: false
+        pose0_queue_size: 5
+        pose0_rejection_threshold: 2  # Note the difference in parameter name
+        pose0_nodelay: false
